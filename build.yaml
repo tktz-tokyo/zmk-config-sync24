@@ -1,7 +1,6 @@
 include:
-  - board: seeeduino_xiao_ble
+  - board: nrf52840dk_nrf52840
     shield: sync24_left
-    snippet: studio-rpc-usb-uart
   - board: seeeduino_xiao_ble
     shield: sync24_right
   - board: seeeduino_xiao_ble
