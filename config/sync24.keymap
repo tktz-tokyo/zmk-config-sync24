@@ -58,8 +58,8 @@
             bindings = <
 
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
-    &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9         &kp N0         &none
-    &kp LCMD    &none       &none       &kp MINUS   &kp EQUAL   &kp LPAR        &kp RPAR    &kp N4      &kp N5      &kp N6         &none          &none
+    &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9         &kp N0         &kp BACKSPACE 
+    &kp LCMD    &none       &none       &kp MINUS   &kp EQUAL   &kp LPAR        &kp RPAR    &kp N4      &kp N5      &kp N6         &none          &kp RET
     &kp LSHFT   &none       &none       &none       &none       &kp LBKT        &kp RBKT    &kp N1      &kp N2      &kp N3         &kp UP_ARROW   &none
     &kp LSHFT   &none       &none       &none       &none       &none           &none       &kp N0      &kp DOT     &kp LEFT_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW
 
