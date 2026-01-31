@@ -19,7 +19,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp LANGUAGE_1 &kp INTERNATIONAL_4 &to 1>
+                = <&macro_tap &kp LANGUAGE_1 &kp INTERNATIONAL_4 &to 4> //レイヤー4へ移動
                 ;
         };
         ng_off: ng_off {
