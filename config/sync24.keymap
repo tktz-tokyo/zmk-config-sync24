@@ -134,8 +134,8 @@
 
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
     &kp TAB    &ng Q       &ng W       &ng E       &ng R       &ng T           &ng Y       &ng U       &ng I       &ng O       &ng P         &kp BACKSPACE 
-    &kp LCTRL  &ng A       &ng S       &ng D       &ng F       &ng G           &ng H       &ng J       &ng K       &ng L       &ng SEMICOLON &ng RET
-    &kp LSHFT  &ng Z       &ng X       &ng C       &ng V       &ng B           &ng N       &ng M       &ng COMMA   &ng DOT     &ng FSLH      &kp RSHIFT
+    &kp LCTRL  &ng A       &ng S       &ng D       &ng F       &ng G           &ng H       &ng J       &ng K       &ng L       &ng SEMI      &ng ENTER
+    &kp LSHFT  &ng Z       &ng X       &ng C       &ng V       &ng B           &ng N       &ng M       &ng COMMA   &ng DOT     &ng SLASH      &kp RSHIFT
     &kp CAPS   &kp LCTRL   &kp LALT    &kp LCMD    &lt 1 BSPC  &ng SPACE       &ng SPACE   &lt 2 RET   &kp RGUI    &kp LEFT    &kp BSLH      &kp RIGHT
             
             >;
