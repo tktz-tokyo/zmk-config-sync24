@@ -7,26 +7,58 @@
 #define ZMK_BEHAVIORS_KEEP_KT
 
 #include <behaviors.dtsi>
+#include <behaviors/naginata.dtsi> // naginata
+
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+    macros {
+        ng_on: ng_on {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LANGUAGE_1 &kp INTERNATIONAL_4 &to 1>
+                ;
+        };
+        ng_off: ng_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LANGUAGE_2 &kp INTERNATIONAL_5 &to 0>
+                ;
+        };
+    };
 
     combos {
         compatible = "zmk,combos";
 
-        combo_us {
-            timeout-ms = <50>;
-            key-positions = <16 17>;
-            bindings = <&kp LANG2>;
+        combo_ng_on {
+            timeout-ms = <300>;
+            key-positions = <18 19>; // H, Jのキー位置に書き換えてください
+            bindings = <&ng_on>;
+            layers = <0>; // デフォルトレイヤーが0の前提
+        };
+        combo_ng_off {
+            timeout-ms = <300>;
+            key-positions = <16 17>; // F, Gのキー位置に書き換えてください
+            bindings = <&ng_off>;
+            layers = <0 1>; // デフォルトレイヤーが0、薙刀式レイヤーが1の前提
         };
 
-        combo_kana {
-            timeout-ms = <50>;
-            key-positions = <18 19>;
-            bindings = <&kp LANG1>;
-        };
+
+//        combo_us {
+//            timeout-ms = <50>;
+//            key-positions = <16 17>;
+//            bindings = <&kp LANG2>;
+//        };
+//
+//        combo_kana {
+//            timeout-ms = <50>;
+//            key-positions = <18 19>;
+//            bindings = <&kp LANG1>;
+//        };
 
         combo_util {
             timeout-ms = <50>;
