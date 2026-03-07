@@ -34,6 +34,50 @@
 
 
 
+
+
+### フォーク元の決定: `eswai/zmk-naginata`
+
+`zmk-naginata` は **eswai リポジトリを起点に fork** して進める。
+理由は、現行最新版追従ではなく、実運用で安定していた系列（v16相当）を基準に修正するため。
+
+運用ルール:
+
+- SYNC24 には fork の **branch ではなく commit hash** を pin する
+- まず「v16相当の基準commit」を固定し、その上に Command 不具合修正commit を積む
+- pin 更新時は `west.yml` 更新コミットに「基準commit / 修正commit / 目的」を明記する
+
+#### 初回セットアップ手順（実務）
+
+1. GitHub で `eswai/zmk-naginata` を自身アカウントへ fork
+2. fork 側で `fix/cmd-ime-v16-base` ブランチを作成
+3. v16相当の基準commitをタグまたはメモで固定
+4. Command不具合修正を実装して commit
+5. SYNC24 側 `config/west.yml` に fork remote/project を追加し commit hash pin
+6. left/right ビルドと macOS/iOS 回帰を実施
+
+#### `west.yml` 反映例（テンプレ）
+
+```yaml
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: naginata-fork
+      url-base: https://github.com/<your-account>
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: v0.3
+      import: app/west.yml
+    - name: zmk-naginata
+      remote: naginata-fork
+      revision: <commit-hash>
+      path: modules/lib/zmk-naginata
+```
+
+> 注意: `<your-account>` と `<commit-hash>` は固定値を使う。branch 名は使わない。
+
 ### ZMK `main` 移行時の対策（必須）
 
 過去に `revision: main` で SYNC24 がビルド不能になったため、当面は `v0.3` を維持します。
