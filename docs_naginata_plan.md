@@ -7,7 +7,7 @@
 
 ## 前提（このリポジトリの現在構成）
 
-- ZMK本体は `config/west.yml` で `main` を参照している
+- ZMK本体は `config/west.yml` で `v0.3` を参照している
 - ビルド対象は `build.yaml` で left/right/settings_reset
 - 実運用キーマップは `config/sync24.keymap` にある
 - 対象OSは **macOS / iOS**（優先検証対象）
@@ -31,6 +31,19 @@
 - 上流未マージ期間は fork を利用し、`west.yml` では branch 参照ではなく commit 固定にする。
 - pin 更新時は「何を解決したcommitか」をコミットメッセージに明記する。
 
+
+
+
+### ZMK `main` 移行時の対策（必須）
+
+過去に `revision: main` で SYNC24 がビルド不能になったため、当面は `v0.3` を維持します。
+`main` へ上げる場合は、次を満たしたときのみ別ブランチで実施します。
+
+1. `chore/zmk-main-migration` ブランチを作成して隔離
+2. left/right 両方で `west build` が通ることを確認
+3. `config/sync24.keymap` の互換性崩れ（behavior / binding）を解消
+4. 既存運用（FG=LANG2, HJ=LANG1）が維持されることを実機確認
+5. 問題発生時は `revision: v0.3` に即時ロールバックできる状態を保持
 
 ### 方針A: まず上流（zmk-naginata）を直し、その後にSYNC24へ取り込む
 
