@@ -7,7 +7,7 @@
 
 ## 前提（このリポジトリの現在構成）
 
-- ZMK本体は `config/west.yml` で `v0.3` を参照している
+- ZMK本体は `config/west.yml` で `main` を参照している
 - ビルド対象は `build.yaml` で left/right/settings_reset
 - 実運用キーマップは `config/sync24.keymap` にある
 - 対象OSは **macOS / iOS**（優先検証対象）
