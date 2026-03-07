@@ -63,6 +63,7 @@
 成果物:
 
 - 再現手順書（Failing scenario）
+  - 本リポジトリでは `docs/phase1_naginata_repro_and_logging.md` を起票済み
 - 最小再現キーマップ（必要なら）
 
 ---
