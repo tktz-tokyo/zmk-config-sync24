@@ -60,11 +60,12 @@
 
 #### 取り込み確認ステータス（SYNC24 側）
 
-現時点の `config/west.yml` では `zmk` のみ定義されており、`zmk-naginata` プロジェクトはまだ未登録。  
-そのため、フォーク作成後は次の2点を必ず反映してから検証に進む。
+現在は `config/west.yml` に `naginata-fork` と `zmk-naginata` を登録済み。  
+`zmk-naginata` は **commit `71c0070` 固定** で取り込んでいる。
 
-- `remotes` に fork 用 remote（例: `naginata-fork`）を追加
-- `projects` に `zmk-naginata` を **commit hash 固定** で追加
+- remote: `naginata-fork` (`https://github.com/tktz-tokyo`)
+- project: `zmk-naginata` (`path: modules/lib/zmk-naginata`)
+- revision(pin): `71c0070`
 
 確認コマンド（反映後）:
 
