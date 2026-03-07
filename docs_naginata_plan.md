@@ -56,6 +56,22 @@
 5. SYNC24 側 `config/west.yml` に fork remote/project を追加し commit hash pin
 6. left/right ビルドと macOS/iOS 回帰を実施
 
+
+
+#### 取り込み確認ステータス（SYNC24 側）
+
+現時点の `config/west.yml` では `zmk` のみ定義されており、`zmk-naginata` プロジェクトはまだ未登録。  
+そのため、フォーク作成後は次の2点を必ず反映してから検証に進む。
+
+- `remotes` に fork 用 remote（例: `naginata-fork`）を追加
+- `projects` に `zmk-naginata` を **commit hash 固定** で追加
+
+確認コマンド（反映後）:
+
+```bash
+rg -n "naginata-fork|zmk-naginata|revision:" config/west.yml
+```
+
 #### `west.yml` 反映例（テンプレ）
 
 ```yaml
