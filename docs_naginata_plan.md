@@ -13,6 +13,23 @@
 
 ## 全体方針
 
+
+## ブランチ戦略（重要）
+
+- **`feat/n-phase4` を統合作業の起点ブランチにする**（現時点で最も開発が進んでいるため）。
+- 本リポジトリ側では新規作業ブランチを `feat/n-phase4` から切り、以下の順で積み上げる。
+  1. `chore/naginata-west-pin`（依存追加・pin）
+  2. `feat/naginata-keymap-min`（最小キーマップ統合）
+  3. `feat/naginata-keymap-tune`（最適化・運用調整）
+- `main` 直積みは避け、`feat/n-phase4` に順次マージして検証を進める。
+
+### zmk-naginata 側との整合ルール
+
+- 上流にPRがある場合は、**merge commit ではなく修正を含む commit hash を pin** する。
+- 上流未マージ期間は fork を利用し、`west.yml` では branch 参照ではなく commit 固定にする。
+- pin 更新時は「何を解決したcommitか」をコミットメッセージに明記する。
+
+
 ### 方針A: まず上流（zmk-naginata）を直し、その後にSYNC24へ取り込む
 
 今回のような入力法ロジックの不具合は、キーマップの回避策だけでなく、
@@ -89,6 +106,13 @@ Commandキー絡みの不具合は、次のどれかが多いです。
 
 `config/west.yml` に zmk-naginata プロジェクトを追加し、
 **修正を含む commit/tag に pin** します（floating branch運用は避ける）。
+
+実務上は次の順で進める:
+
+1. `feat/n-phase4` を最新化
+2. そこから `chore/naginata-west-pin` を作成
+3. `west.yml` に `zmk-naginata` を追加し、対象 commit を固定
+4. left/right のビルドが通ることを確認して `feat/n-phase4` へ戻す
 
 ### 3-2. キーマップ統合
 
