@@ -6,13 +6,19 @@ manifest:
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
     - name: eswai # ここを追加
       url-base: https://github.com/eswai
+    - name: naginata-fork
+      url-base: https://github.com/tktz-tokyo
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
-    - name: zmk-naginata # ここを追加
-      remote: eswai
-      revision: main
+    - name: zmk-naginata
+      remote: naginata-fork
+      revision: 71c0070
+      path: modules/lib/zmk-naginata
+   #- name: zmk-naginata # ここを追加
+   #  remote: eswai
+   #  revision: main
   self:
     path: config
