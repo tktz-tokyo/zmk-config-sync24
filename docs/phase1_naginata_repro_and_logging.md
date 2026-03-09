@@ -87,6 +87,20 @@
 
 ## 4. 記録シート（コピペ用）
 
+### 4-1. TSV形式（推奨: そのままメモアプリ/スプレッドシートへ貼り付け）
+
+```tsv
+Case	OS	Connection	Trial	PASS/FAIL	Observed	Notes
+S1	macOS	USB	1/10			
+S1	macOS	USB	2/10			
+S2	macOS	BT	1/10			
+S3	iOS	BT	1/10			
+S4	macOS	BT	1/10			
+S5	macOS	BT	1/10			
+```
+
+### 4-2. Markdown表（GitHub閲覧用）
+
 | Case | OS | Connection | Trial | PASS/FAIL | Observed | Notes |
 |---|---|---|---:|---|---|---|
 | S1 | macOS | USB | 1/10 |  |  |  |
