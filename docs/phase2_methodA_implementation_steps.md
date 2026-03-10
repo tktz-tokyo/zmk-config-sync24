@@ -75,3 +75,7 @@ return process_naginata_target(event);
 
 - `scripts/update_naginata_revision.sh <new-commit>` で `config/west.yml` の `zmk-naginata` revision を更新できる。
 - 例: `./scripts/update_naginata_revision.sh 0123abcd`
+
+## 9. 環境診断
+
+- `scripts/phase2_env_diagnose.sh` で `west` 有無・GitHub/PyPI 到達性を確認できる。

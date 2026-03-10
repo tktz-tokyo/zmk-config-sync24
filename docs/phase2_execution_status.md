@@ -29,3 +29,13 @@ west build -s zmk/app -d build/left -b seeeduino_xiao_ble -- -DSHIELD=sync24_lef
 west build -s zmk/app -d build/right -b seeeduino_xiao_ble -- -DSHIELD=sync24_right
 ```
 
+
+## 追加診断（この環境で実行）
+
+- `python3 -m pip install --user west` は失敗
+  - 原因: proxy 経由通信が `403 Forbidden`（`pypi.org` 到達不可）
+- `scripts/phase2_env_diagnose.sh` による診断結果
+  - `github.com`: 403
+  - `pypi.org`: 403
+
+=> 現在の環境では、`west` インストールおよび `west update` に必要な外部アクセスがブロックされている。
