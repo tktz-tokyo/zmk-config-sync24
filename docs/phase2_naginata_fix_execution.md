@@ -54,15 +54,8 @@ rg -n "naginata-fork|zmk-naginata|revision:" config/west.yml
 - S4: PASS（左右差なし）
 - S5: PASS（MO/LTでNum遷移可能）
 
+## 5. 実装順序の原則
 
-## 5. SYNC24 側の暫定ワークアラウンド（実装済み）
-
-本リポジトリでは、上流修正完了までの暫定対応として `config/sync24.keymap` に以下を追加済み。
-
-- Utilレイヤーに `Cmd+C / Cmd+V / Cmd+X / Cmd+Z / Cmd+Tab` マクロを配置
-- Utilレイヤーに `&tog 1`（Numレイヤートグル）と数字キー群を配置
-
-目的:
-- S2 の作業継続性を確保（コピー/貼り付け系ショートカットの代替導線）
-- S5 の作業継続性を確保（MO/LTが不安定な間のNum入力導線）
-
+- S5は **zmk-naginata本体でのレイヤーキー常時パススルー実装** を先に行う。
+- `sync24.keymap` 側での回避策先行は行わない。
+- 詳細設計は `docs/phase2_s5_layer_passthrough_design.md` を参照。

@@ -36,65 +36,6 @@
     };
 
 
-    macros {
-        compatible = "zmk,behaviors";
-
-        cmd_copy: cmd_copy {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings = <&macro_press &kp LCMD>
-                , <&macro_tap &kp C>
-                , <&macro_release &kp LCMD>
-                ;
-        };
-
-        cmd_paste: cmd_paste {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings = <&macro_press &kp LCMD>
-                , <&macro_tap &kp V>
-                , <&macro_release &kp LCMD>
-                ;
-        };
-
-        cmd_cut: cmd_cut {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings = <&macro_press &kp LCMD>
-                , <&macro_tap &kp X>
-                , <&macro_release &kp LCMD>
-                ;
-        };
-
-        cmd_undo: cmd_undo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings = <&macro_press &kp LCMD>
-                , <&macro_tap &kp Z>
-                , <&macro_release &kp LCMD>
-                ;
-        };
-
-        cmd_tab: cmd_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings = <&macro_press &kp LCMD>
-                , <&macro_tap &kp TAB>
-                , <&macro_release &kp LCMD>
-                ;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -147,9 +88,9 @@
             bindings = <
 
 // ╷               ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
-    &bt BT_SEL 0    &bt BT_SEL 1&bt BT_SEL 2&bt BT_SEL 3&bt BT_SEL 4&bt BT_CLR      &cmd_copy   &cmd_paste  &cmd_cut    &cmd_undo   &cmd_tab    &tog 1
-    &studio_unlock  &none       &none       &none       &none       &none           &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6
-    &none           &none       &none       &none       &none       &none           &kp N7      &kp N8      &kp N9      &kp N0      &none       &none
+    &bt BT_SEL 0    &bt BT_SEL 1&bt BT_SEL 2&bt BT_SEL 3&bt BT_SEL 4&bt BT_CLR      &none       &none       &none       &none       &none       &none
+    &studio_unlock  &none       &none       &none       &none       &none           &none       &none       &none       &none       &none       &none
+    &none           &none       &none       &none       &none       &none           &none       &none       &none       &none       &none       &none
     &none           &none       &none       &none       &none       &none           &none       &none       &none       &none       &none       &none
             
             >;
