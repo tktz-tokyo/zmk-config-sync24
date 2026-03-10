@@ -15,7 +15,7 @@ manifest:
       import: app/west.yml
     - name: zmk-naginata
       remote: naginata-fork
-      revision: c8953e1 #71c0070
+      revision: dcdc5b3 #c8953e1 #v17 #71c0070
       path: modules/lib/zmk-naginata
    #- name: zmk-naginata # ここを追加
    #  remote: eswai
