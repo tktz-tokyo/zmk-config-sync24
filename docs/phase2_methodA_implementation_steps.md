@@ -64,3 +64,8 @@ return process_naginata_target(event);
 ## 6. SYNC24 反映
 
 修正commit作成後、`config/west.yml` の `zmk-naginata` `revision` を更新する。
+
+## 7. 実行補助スクリプト
+
+- SYNC24側の前提確認とビルド確認は `scripts/phase2_methodA_runbook.sh` を使用。
+- `west` 未導入環境では、必要コマンドを案内して終了する。
