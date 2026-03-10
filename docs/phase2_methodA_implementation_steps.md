@@ -69,3 +69,9 @@ return process_naginata_target(event);
 
 - SYNC24側の前提確認とビルド確認は `scripts/phase2_methodA_runbook.sh` を使用。
 - `west` 未導入環境では、必要コマンドを案内して終了する。
+
+
+## 8. pin更新の自動化
+
+- `scripts/update_naginata_revision.sh <new-commit>` で `config/west.yml` の `zmk-naginata` revision を更新できる。
+- 例: `./scripts/update_naginata_revision.sh 0123abcd`
