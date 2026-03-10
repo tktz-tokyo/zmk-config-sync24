@@ -49,3 +49,12 @@ west build -s zmk/app -d build/right -b seeeduino_xiao_ble -- -DSHIELD=sync24_ri
 - ただし現環境は `modules/lib/zmk-naginata` 未実体化のため、生成は未実行。
 
 - `docs/phase2_naginata_source_flow.md` に、実コード展開後に埋める解析フローテンプレートを追加。
+
+
+## 上流修正反映（zmk-naginata）
+
+- 別会話で実施した `zmk-naginata` 側の S2/S5 修正コミット `1683704` を反映するため、
+  `config/west.yml` の `zmk-naginata` revision を `1683704` に更新。
+- 修正内容要旨（上流側）
+  - modifier 押下中は薙刀変換を通さずショートカット透過（S2）
+  - layer control（MO/LT/TO/TG）を最優先透過、press時は未確定バッファ commit（S5）

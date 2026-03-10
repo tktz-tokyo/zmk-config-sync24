@@ -13,7 +13,7 @@ manifest:
       import: app/west.yml
     - name: zmk-naginata
       remote: naginata-fork
-      revision: 71c0070
+      revision: 1683704
       path: modules/lib/zmk-naginata
   self:
     path: config
