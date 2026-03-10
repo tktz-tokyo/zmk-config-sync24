@@ -64,3 +64,8 @@ rg -n "naginata-fork|zmk-naginata|revision:" config/west.yml
 
 - 実装詳細は `docs/phase2_methodA_implementation_steps.md` を参照。
 - 本体修正（fork）→ `west.yml` pin 更新 → S1〜S5 回帰 の順で進める。
+
+## 7. 上流PRドラフト作成
+
+- `scripts/phase2_prepare_upstream_pr.sh` を実行して、`docs/phase2_upstream_pr_draft.md` を生成する。
+- 生成物をベースに fork/upstream PR 本文を作成する。
