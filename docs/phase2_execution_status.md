@@ -39,3 +39,13 @@ west build -s zmk/app -d build/right -b seeeduino_xiao_ble -- -DSHIELD=sync24_ri
   - `pypi.org`: 403
 
 => 現在の環境では、`west` インストールおよび `west update` に必要な外部アクセスがブロックされている。
+
+
+## ソース解析対応
+
+- `scripts/phase2_extract_naginata_flow.sh` を追加し、`zmk-naginata/src` 実体がある環境では
+  キー処理・同時押し・レイヤー関連の候補シンボルを抽出して
+  `docs/phase2_naginata_source_flow.md` を生成可能にした。
+- ただし現環境は `modules/lib/zmk-naginata` 未実体化のため、生成は未実行。
+
+- `docs/phase2_naginata_source_flow.md` に、実コード展開後に埋める解析フローテンプレートを追加。
