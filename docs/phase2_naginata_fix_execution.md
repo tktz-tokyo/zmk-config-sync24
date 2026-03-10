@@ -59,3 +59,8 @@ rg -n "naginata-fork|zmk-naginata|revision:" config/west.yml
 - S5は **zmk-naginata本体でのレイヤーキー常時パススルー実装** を先に行う。
 - `sync24.keymap` 側での回避策先行は行わない。
 - 詳細設計は `docs/phase2_s5_layer_passthrough_design.md` を参照。
+
+## 6. Method A 実装手順（詳細）
+
+- 実装詳細は `docs/phase2_methodA_implementation_steps.md` を参照。
+- 本体修正（fork）→ `west.yml` pin 更新 → S1〜S5 回帰 の順で進める。
