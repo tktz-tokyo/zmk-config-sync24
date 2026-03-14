@@ -19,7 +19,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp LANGUAGE_1 &kp INTERNATIONAL_4 &to 4> //レイヤー4へ移動
+                = <&macro_tap &kp LANGUAGE_1 &kp INTERNATIONAL_4 &to 1> //レイヤー4へ移動してたのを1へ
                 ;
         };
         ng_off: ng_off {
@@ -44,7 +44,7 @@
             timeout-ms = <300>;
             key-positions = <16 17>; // F, Gのキー位置に書き換えてください
             bindings = <&ng_off>;
-            layers = <0 4>; // デフォルトレイヤーが0、薙刀式レイヤーが1の前提、4に書き換え
+            layers = <0 1>; // デフォルトレイヤーが0、薙刀式レイヤーが1の前提、4に書き換え、で1へ
         };
 
         combo_return {
@@ -68,7 +68,7 @@
         combo_util {
             timeout-ms = <50>;
             key-positions = <36 37>;
-            bindings = <&mo 3>;
+            bindings = <&mo 4>; //薙刀式レイヤーが1になったので、3から4へ
         };
     };
 
@@ -86,6 +86,21 @@
     &kp LSHFT  &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH      &kp RSHIFT
     &kp CAPS   &kp LCTRL   &kp LALT    &kp LCMD    &lt 1 BSPC  &kp SPACE       &kp SPACE   &lt 2 RET   &kp RGUI    &kp LEFT    &kp BSLH      &kp RIGHT
 
+            >;
+        };
+
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        extra1 {
+//          status = "reserved";
+            display-name = "NAGINATA";
+            bindings = <
+
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+    &kp TAB    &ng Q       &ng W       &ng E       &ng R       &ng T           &ng Y       &ng U       &ng I       &ng O       &ng P         &kp BACKSPACE 
+    &kp LCTRL  &ng A       &ng S       &ng D       &ng F       &ng G           &ng H       &ng J       &ng K       &ng L       &ng SEMI      &ng ENTER
+    &kp LSHFT  &ng Z       &ng X       &ng C       &ng V       &ng B           &ng N       &ng M       &ng COMMA   &ng DOT     &ng SLASH      &kp RSHIFT
+    &kp CAPS   &kp LCTRL   &kp LALT    &kp LCMD    &to 1       &ng SPACE       &ng SPACE   &lt 2 RET   &kp RGUI    &kp LEFT    &kp BSLH      &kp RIGHT
+            
             >;
         };
 
@@ -132,20 +147,6 @@
             >;
         };
 
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-        extra1 {
-//          status = "reserved";
-            display-name = "NAGINATA";
-            bindings = <
-
-// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
-    &kp TAB    &ng Q       &ng W       &ng E       &ng R       &ng T           &ng Y       &ng U       &ng I       &ng O       &ng P         &kp BACKSPACE 
-    &kp LCTRL  &ng A       &ng S       &ng D       &ng F       &ng G           &ng H       &ng J       &ng K       &ng L       &ng SEMI      &ng ENTER
-    &kp LSHFT  &ng Z       &ng X       &ng C       &ng V       &ng B           &ng N       &ng M       &ng COMMA   &ng DOT     &ng SLASH      &kp RSHIFT
-    &kp CAPS   &kp LCTRL   &kp LALT    &kp LCMD    &to 1       &ng SPACE       &ng SPACE   &lt 2 RET   &kp RGUI    &kp LEFT    &kp BSLH      &kp RIGHT
-            
-            >;
-        };
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
         extra2 {
