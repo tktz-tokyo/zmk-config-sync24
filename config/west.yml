@@ -13,12 +13,12 @@ manifest:
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
-    - name: zmk-naginata
-      remote: naginata-fork
-      revision: 485b1e1 #c8953e1 #v17 #71c0070
-      path: modules/lib/zmk-naginata
-   #- name: zmk-naginata # ここを追加
-   #  remote: eswai
-   #  revision: main
+  #  - name: zmk-naginata
+   #   remote: naginata-fork
+    #  revision: 485b1e1 #c8953e1 #v17 #71c0070
+    # path: modules/lib/zmk-naginata
+    - name: zmk-naginata # ここを追加
+      remote: eswai
+      revision: main
   self:
     path: config
