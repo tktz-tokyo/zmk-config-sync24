@@ -19,6 +19,6 @@ manifest:
     # path: modules/lib/zmk-naginata
     - name: zmk-naginata # ここを追加
       remote: eswai
-      revision: main
+      revision: 71c0070 #main
   self:
     path: config
