@@ -51,12 +51,12 @@
             tap-ms = <30>;
             bindings =
                 <&macro_press &kp LSHFT>
-                , <&kp N>
+                , <&macro_tap &kp N>
                 , <&macro_release &kp LSHFT>
                 , <&macro_tap_time 600>
                 , <&macro_wait_time 600>
                 , <&macro_press &kp LGUI>
-                , <&kp LBKT>
+                , <&macro_tap &kp LBKT>
                 , <&macro_release &kp LGUI>;
         };
         yt_skip_safari: yt_skip_safari {
@@ -66,12 +66,12 @@
             tap-ms = <40>;
             bindings =
                 <&macro_press &kp LALT>
-                , <&kp TAB>
-                , <&kp TAB>
-                , <&kp TAB>
-                , <&kp TAB>
+                , <&macro_press TAB>
+                , <&macro_press AB>
+                , <&macro_press TAB>
+                , <&macro_press TAB>
                 , <&macro_release &kp LALT>
-                , <&kp ENTER>;
+                , <&macro_press ENTER>;
         };
     };
 
