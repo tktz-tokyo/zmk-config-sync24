@@ -44,6 +44,20 @@
                 , <&macro_press &tog 1 >
                 ;
         };
+        yt_skip_by_next_back: yt_skip_by_next_back {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <60>;
+            tap-ms = <30>;
+            bindings =
+                <&macro_press &kp LSHFT>
+                , <&kp N>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap_time 600>
+                , <&macro_press &kp LGUI>
+                , <&kp LBKT>
+                , <&macro_release &kp LGUI>;
+        };
     };
 
     combos {
