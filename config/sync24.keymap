@@ -59,6 +59,20 @@
                 , <&kp LBKT>
                 , <&macro_release &kp LGUI>;
         };
+        yt_skip_safari: yt_skip_safari {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <120>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press &kp LALT>
+                , <&kp TAB>
+                , <&kp TAB>
+                , <&kp TAB>
+                , <&kp TAB>
+                , <&macro_release &kp LALT>
+                , <&kp ENTER>;
+        };
     };
 
     combos {
